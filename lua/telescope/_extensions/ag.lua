@@ -45,7 +45,7 @@ function M.ag(text_to_find)
 	}
 	local opts = default_opts
 
-	local args = { "ag", text_to_find }
+	local args = { "ag", text_to_find, "--path-to-ignore", "~/.config/lvim/.ignore", "--hidden" }
 	pickers.new(opts, {
 		prompt_title = "Silver Searcher",
 		finder = finders.new_oneshot_job(args, opts),
